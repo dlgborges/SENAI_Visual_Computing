@@ -139,7 +139,7 @@ with st.sidebar:
 
     conf = st.slider(
         "Confiança mínima",
-        min_value=0.05,
+        min_value=0.01,
         max_value=0.95,
         value=0.35,
         step=0.05
