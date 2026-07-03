@@ -1,0 +1,10 @@
+streamlit
+opencv-python-headless
+pillow
+numpy
+sqlalchemy
+psycopg2-binary
+alembic
+python-dotenv
+pandas
+plotly
