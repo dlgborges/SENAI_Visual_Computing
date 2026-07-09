@@ -1,0 +1,16 @@
+# Blueprint do Render (opcional). Permite deploy em um clique via
+# "New + > Blueprint" no painel do Render, apontando para este
+# repositório. Se preferir configurar manualmente pelo painel, veja o
+# passo a passo no README.md — este arquivo não é obrigatório.
+services:
+  - type: web
+    name: agente-saude
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run app.py --server.port $PORT --server.address 0.0.0.0"
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: meta-llama/llama-3.2-3b-instruct:free
